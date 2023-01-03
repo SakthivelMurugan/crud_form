@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>flask crud</title>
+    </head>
+    <body>
+        <h1>crud operations in form</h1>
+        <form method="post">
+            <input id="id" name="id" placeholder="enter id" required=1>
+            <br>
+            <input id="name" name="name" placeholder="enter name" required=1>
+            <br>
+            <input id="course" name="course" placeholder="enter course" required=1>
+            <br>
+            <input type="submit">
+        </form>
+        <table>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>course</th>
+            </tr>
+            {% for i in z: %}
+            <tr>
+                <td>{{i.id}}</td>
+                <td>{{i.name}}</td>
+                <td>{{i.course}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
